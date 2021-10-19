@@ -2,7 +2,7 @@ import React from "react";
 
 interface InitialValues {
   name: string;
-  telephone: string;
+  telephone: number;
   email: string;
   address: string;
 }
