@@ -12,7 +12,7 @@ const Form = () => {
   const [values, setValues] = React.useState({} as InitialValues);
   return (
     <Container>
-      <h2>Lista de pacientes</h2>
+      <h2>Formulário de cadastro</h2>
     </Container>
   );
 };

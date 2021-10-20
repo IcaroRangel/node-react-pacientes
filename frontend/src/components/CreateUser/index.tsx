@@ -10,10 +10,10 @@ const CreateUser = () => {
       </header>
       <div>
         <div>
-          <h2 style={{ width: "30rem" }}>Formulário de cadastro</h2>
           <div>
             <Form />
           </div>
+          <h2 style={{ width: "30rem" }}>Lista de pacientes</h2>
         </div>
       </div>
     </Container>
