@@ -7,6 +7,8 @@ export const Container = styled.div`
     justify-content: center;
     margin: 0 6rem 0 6rem;
     height: 25vh;
-    background: #d6ffff;
+    background: #e7feff;
+    border-radius: 2px;
+    text-transform: capitalize;
   }
 `;
