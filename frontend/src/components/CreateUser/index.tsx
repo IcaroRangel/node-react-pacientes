@@ -6,15 +6,14 @@ const CreateUser = () => {
   return (
     <Container>
       <header>
-        <h1>Cadastro de pacientes</h1>
+        <h1>Cadastro de Pacientes</h1>
       </header>
       <div>
         <div>
-          <h3>Formulário de cadastro</h3>
-          <span>...</span>
-        </div>
-        <div>
-          <Form />
+          <h2 style={{ width: "30rem" }}>Formulário de cadastro</h2>
+          <div>
+            <Form />
+          </div>
         </div>
       </div>
     </Container>

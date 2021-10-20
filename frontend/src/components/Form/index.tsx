@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "./styles";
 
 interface InitialValues {
   name: string;
@@ -10,10 +11,9 @@ interface InitialValues {
 const Form = () => {
   const [values, setValues] = React.useState({} as InitialValues);
   return (
-    <div>
-      <h3>Lista de pacientes</h3>
-      <span>...</span>
-    </div>
+    <Container>
+      <h2>Lista de pacientes</h2>
+    </Container>
   );
 };
 
