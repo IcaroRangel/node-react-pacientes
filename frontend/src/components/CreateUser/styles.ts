@@ -17,10 +17,13 @@ export const Container = styled.div`
     margin: 0 6rem 0 6rem;
     height: 30vh;
     div {
+      h2 {
+        width: 16rem;
+      }
       width: 100%;
       margin: 0;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
     }
   }
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "./styles";
-
+import { FiUser } from "react-icons/fi";
 interface InitialValues {
   name: string;
   telephone: number;
@@ -12,7 +12,12 @@ const Form = () => {
   const [values, setValues] = React.useState({} as InitialValues);
   return (
     <Container>
-      <h2>Formulário de cadastro</h2>
+      <div>
+        <div>
+          <FiUser />
+        </div>
+        <input type="text" placeholder="Nome" value={values.name} />
+      </div>
     </Container>
   );
 };
