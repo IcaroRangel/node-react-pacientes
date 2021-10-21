@@ -5,7 +5,6 @@ export const Container = styled.form`
   h3 {
     margin-bottom: 15px;
   }
-
   svg {
     border-radius: 8px;
     height: 20px;
@@ -18,6 +17,14 @@ export const Container = styled.form`
     background: #e7feff;
     margin-left: 5px;
     transition: all ease 0.3s;
+  }
+  button {
+    border-radius: 4px;
+    background: #d3d3d3;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
   }
 `;
 

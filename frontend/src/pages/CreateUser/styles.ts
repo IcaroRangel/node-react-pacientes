@@ -35,7 +35,6 @@ export const Container = styled.div`
 `;
 
 export const ContainerPatients = styled.section`
-  margin-top: 3rem;
   div {
     display: flex;
     align-items: flex-start;

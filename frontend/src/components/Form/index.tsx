@@ -70,7 +70,7 @@ const Form = () => {
         />
       </ContainerInputs>
 
-      <button>Ok</button>
+      <button>Cadastrar</button>
     </Container>
   );
 };
