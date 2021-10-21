@@ -1,13 +1,14 @@
 import React from "react";
-import CreateUser from "./pages/CreateUser";
 import GlobalStyle from "./styles/global";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "./routes";
 
 function App() {
   return (
-    <div>
-      <CreateUser />
+    <Router>
+      <Routes />
       <GlobalStyle />
-    </div>
+    </Router>
   );
 }
 
