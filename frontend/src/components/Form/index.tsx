@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "./styles";
+import { Container, ContainerInputs } from "./styles";
 import { FiUser, FiMail } from "react-icons/fi";
 import { FaStreetView, FaVoicemail } from "react-icons/fa";
 interface InitialValues {
@@ -28,7 +28,8 @@ const Form = () => {
   }, []);
   return (
     <Container onSubmit={handleSubmit}>
-      <div>
+      <h3>Cadastre-se aqui</h3>
+      <ContainerInputs>
         <div>
           <FiUser />
         </div>
@@ -38,8 +39,8 @@ const Form = () => {
           value={values.name}
           onChange={handleChange}
         />
-      </div>
-      <div>
+      </ContainerInputs>
+      <ContainerInputs>
         <div>
           <FiMail />
         </div>
@@ -49,8 +50,8 @@ const Form = () => {
           value={values.email}
           onChange={handleChange}
         />
-      </div>
-      <div>
+      </ContainerInputs>
+      <ContainerInputs>
         <div>
           <FaStreetView />
         </div>
@@ -60,8 +61,8 @@ const Form = () => {
           value={values.address}
           onChange={handleChange}
         />
-      </div>
-      <div>
+      </ContainerInputs>
+      <ContainerInputs>
         <div>
           <FaVoicemail />
         </div>
@@ -71,7 +72,8 @@ const Form = () => {
           value={values.telephone}
           onChange={handleChange}
         />
-      </div>
+      </ContainerInputs>
+      <button>Ok</button>
     </Container>
   );
 };

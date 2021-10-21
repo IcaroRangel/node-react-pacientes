@@ -6,7 +6,11 @@ const CreateUser = () => {
   return (
     <Container>
       <header>
-        <h1>Cadastro de Pacientes</h1>
+        <span>
+          <p>Cadastro de Pacientes</p>
+          <br />
+          Hospital Icaro Rangel
+        </span>
       </header>
       <div>
         <div>
