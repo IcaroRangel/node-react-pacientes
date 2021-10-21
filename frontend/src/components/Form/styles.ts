@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.form`
+  margin-right: 10rem;
   h3 {
     margin-bottom: 15px;
   }
+
   svg {
     border-radius: 8px;
     height: 20px;
     width: 30px;
-    background: #909090;
+    background: #d3d3d3;
   }
   input {
     border-radius: 4px;

@@ -1,7 +1,7 @@
 import React from "react";
 import Form from "../../components/Form";
 import api from "../../services/api";
-import { Container } from "./styles";
+import { Container, ContainerPatients } from "./styles";
 
 interface UserProps {
   id: number;
@@ -33,22 +33,26 @@ const CreateUser = () => {
         </span>
       </header>
       <div>
-        <div>
-          <Form />
-          <h2>Lista de pacientes</h2>
-          <div>
-            {users.map((user) => (
+        <Form />
+
+        <ContainerPatients>
+          {users.map((user) => (
+            <>
               <div>
-                <span>
-                  <p>{user.name}</p>
-                  <p>{user.telephone}</p>
-                  <p>{user.email}</p>
-                  <p>{user.address}</p>
-                </span>
+                <h4>Nome</h4>
+                <h4>Telefone</h4>
+                <h4>E-mail</h4>
+                <h4>Endereço</h4>
               </div>
-            ))}
-          </div>
-        </div>
+              <div>
+                <p>{user.name}</p>
+                <p>{user.telephone}</p>
+                <p>{user.email}</p>
+                <p>{user.address}</p>
+              </div>
+            </>
+          ))}
+        </ContainerPatients>
       </div>
     </Container>
   );

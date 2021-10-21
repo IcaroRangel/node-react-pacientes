@@ -24,12 +24,42 @@ export const Container = styled.div`
     height: 30vh;
     div {
       h2 {
-        width: 16rem;
+        width: 20rem;
       }
       width: 100%;
       margin: 0;
       display: flex;
       justify-content: flex-start;
+    }
+  }
+`;
+
+export const ContainerPatients = styled.section`
+  margin-top: 3rem;
+  div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between !important;
+    text-align: center;
+    height: 4rem;
+    width: 40rem !important;
+    width: 300px;
+
+    border-bottom: 1px solid #d3d3d3;
+    border-top: 1px solid #d3d3d3;
+    h4 {
+      width: 5rem;
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    p {
+      height: 4rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 5rem;
     }
   }
 `;

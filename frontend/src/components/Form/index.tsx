@@ -63,7 +63,6 @@ const Form = () => {
           <FaStreetView />
         </div>
         <input
-          required
           type="text"
           placeholder="Endereço"
           value={address}
