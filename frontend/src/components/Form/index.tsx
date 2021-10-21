@@ -9,7 +9,7 @@ const Form = () => {
   const [telephone, setTelephone] = React.useState(Number);
   const [email, setEmail] = React.useState("");
   const [address, setAddress] = React.useState("");
-  const handleChange = React.useCallback(
+  const PostUser = React.useCallback(
     async (e: FormEvent) => {
       e.preventDefault();
       const response = { name, telephone, email, address };
@@ -19,7 +19,7 @@ const Form = () => {
   );
 
   return (
-    <Container onSubmit={handleChange}>
+    <Container onSubmit={PostUser}>
       <h3>Cadastre-se aqui</h3>
       <ContainerInputs>
         <div>
@@ -38,6 +38,7 @@ const Form = () => {
         </div>
         <input
           type="text"
+          pattern="[0-9]+$"
           placeholder="Telefone"
           value={telephone}
           onChange={(e: any) => setTelephone(e.target.value)}
