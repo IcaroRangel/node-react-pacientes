@@ -26,6 +26,7 @@ const Form = () => {
           <FiUser />
         </div>
         <input
+          required
           type="text"
           placeholder="Nome"
           value={name}
@@ -37,6 +38,7 @@ const Form = () => {
           <FaVoicemail />
         </div>
         <input
+          required
           type="text"
           pattern="[0-9]+$"
           placeholder="Telefone"
@@ -49,6 +51,7 @@ const Form = () => {
           <FiMail />
         </div>
         <input
+          required
           type="text"
           placeholder="Email"
           value={email}
@@ -60,6 +63,7 @@ const Form = () => {
           <FaStreetView />
         </div>
         <input
+          required
           type="text"
           placeholder="Endereço"
           value={address}
