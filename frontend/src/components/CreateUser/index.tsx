@@ -11,7 +11,6 @@ const CreateUser = () => {
       <div>
         <div>
           <Form />
-
           <h2>Lista de pacientes</h2>
         </div>
       </div>
