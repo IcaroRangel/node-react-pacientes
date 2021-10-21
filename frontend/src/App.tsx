@@ -1,5 +1,5 @@
 import React from "react";
-import CreateUser from "./components/CreateUser";
+import CreateUser from "./pages/CreateUser";
 import GlobalStyle from "./styles/global";
 
 function App() {
