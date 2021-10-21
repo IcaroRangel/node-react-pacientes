@@ -9,7 +9,7 @@ export const Container = styled.div`
       font-weight: 100;
       font-size: 30px;
     }
-
+    padding-left: 10px;
     margin: 0 6rem 0 6rem;
     height: 25vh;
     background: #e7feff;
