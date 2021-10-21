@@ -1,33 +1,25 @@
-import React from "react";
+import React, { FormEvent } from "react";
 import { Container, ContainerInputs } from "./styles";
 import { FiUser, FiMail } from "react-icons/fi";
 import { FaStreetView, FaVoicemail } from "react-icons/fa";
-interface InitialValues {
-  name: string;
-  telephone: number;
-  email: string;
-  address: string;
-}
+import api from "../../services/api";
 
 const Form = () => {
-  const [values, setValues] = React.useState({} as InitialValues);
+  const [name, setName] = React.useState("");
+  const [telephone, setTelephone] = React.useState(Number);
+  const [email, setEmail] = React.useState("");
+  const [address, setAddress] = React.useState("");
   const handleChange = React.useCallback(
-    (e: any) => {
-      let { name, value } = e.target;
-
-      setValues({
-        ...values,
-        [name]: value,
-      });
+    async (e: FormEvent) => {
+      e.preventDefault();
+      const response = { name, telephone, email, address };
+      await api.post("", response);
     },
-    [values]
+    [address, email, name, telephone]
   );
 
-  const handleSubmit = React.useCallback((e: any) => {
-    e.preventDefault();
-  }, []);
   return (
-    <Container onSubmit={handleSubmit}>
+    <Container onSubmit={handleChange}>
       <h3>Cadastre-se aqui</h3>
       <ContainerInputs>
         <div>
@@ -36,30 +28,8 @@ const Form = () => {
         <input
           type="text"
           placeholder="Nome"
-          value={values.name}
-          onChange={handleChange}
-        />
-      </ContainerInputs>
-      <ContainerInputs>
-        <div>
-          <FiMail />
-        </div>
-        <input
-          type="text"
-          placeholder="Email"
-          value={values.email}
-          onChange={handleChange}
-        />
-      </ContainerInputs>
-      <ContainerInputs>
-        <div>
-          <FaStreetView />
-        </div>
-        <input
-          type="text"
-          placeholder="Endereço"
-          value={values.address}
-          onChange={handleChange}
+          value={name}
+          onChange={(e: any) => setName(e.target.value)}
         />
       </ContainerInputs>
       <ContainerInputs>
@@ -69,10 +39,33 @@ const Form = () => {
         <input
           type="text"
           placeholder="Telefone"
-          value={values.telephone}
-          onChange={handleChange}
+          value={telephone}
+          onChange={(e: any) => setTelephone(e.target.value)}
         />
       </ContainerInputs>
+      <ContainerInputs>
+        <div>
+          <FiMail />
+        </div>
+        <input
+          type="text"
+          placeholder="Email"
+          value={email}
+          onChange={(e: any) => setEmail(e.target.value)}
+        />
+      </ContainerInputs>
+      <ContainerInputs>
+        <div>
+          <FaStreetView />
+        </div>
+        <input
+          type="text"
+          placeholder="Endereço"
+          value={address}
+          onChange={(e: any) => setAddress(e.target.value)}
+        />
+      </ContainerInputs>
+
       <button>Ok</button>
     </Container>
   );
