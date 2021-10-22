@@ -53,12 +53,20 @@ const UpdateUser = () => {
           <h4>Endereço</h4>
         </div>
         <div>
-          <p>{name}</p>
-          <p>{telephone}</p>
-          <p>{email}</p>
-          <p>{address}</p>
+          <span>
+            <input required type="text" />
+          </span>
+          <span>
+            <input required type="text" />
+          </span>
+          <span>
+            <input required type="text" />
+          </span>
+          <span>
+            <input required type="text" />
+          </span>
         </div>
-      </section>
+      </Section>
     </Container>
   );
 };
