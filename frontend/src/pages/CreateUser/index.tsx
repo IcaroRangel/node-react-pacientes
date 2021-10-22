@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Form from "../../components/Form";
 import Header from "../../components/Header";
+import Section from "../../components/Section";
 import api from "../../services/api";
-import { Container, ContainerPatients } from "./styles";
+import { Container } from "./styles";
 
 interface UserProps {
   id: number;
@@ -46,7 +47,7 @@ const CreateUser = () => {
       </Header>
       <div>
         <Form />
-        <ContainerPatients>
+        <Section>
           {users.map((user) => (
             <>
               <div key={user.id}>
@@ -71,7 +72,7 @@ const CreateUser = () => {
               </span>
             </>
           ))}
-        </ContainerPatients>
+        </Section>
       </div>
     </Container>
   );
