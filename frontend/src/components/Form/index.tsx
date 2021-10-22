@@ -3,6 +3,7 @@ import { Container, ContainerInputs } from "./styles";
 import { FiUser, FiMail } from "react-icons/fi";
 import { FaStreetView, FaVoicemail } from "react-icons/fa";
 import api from "../../services/api";
+import Button from "../Button";
 
 const Form = () => {
   const [name, setName] = React.useState("");
@@ -70,7 +71,7 @@ const Form = () => {
         />
       </ContainerInputs>
 
-      <button>Cadastrar</button>
+      <Button>Cadastrar</Button>
     </Container>
   );
 };

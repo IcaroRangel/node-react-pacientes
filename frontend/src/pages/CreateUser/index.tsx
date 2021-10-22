@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../components/Button";
 import Form from "../../components/Form";
 import api from "../../services/api";
 import { Container, ContainerPatients } from "./styles";
@@ -34,7 +35,6 @@ const CreateUser = () => {
       </header>
       <div>
         <Form />
-
         <ContainerPatients>
           {users.map((user) => (
             <>
@@ -44,12 +44,17 @@ const CreateUser = () => {
                 <h4>E-mail</h4>
                 <h4>Endereço</h4>
               </div>
+
               <div>
                 <p>{user.name}</p>
                 <p>{user.telephone}</p>
                 <p>{user.email}</p>
                 <p>{user.address}</p>
               </div>
+              <span>
+                <Button>Remover paciente</Button>
+                <Button>Editar paciente</Button>
+              </span>
             </>
           ))}
         </ContainerPatients>

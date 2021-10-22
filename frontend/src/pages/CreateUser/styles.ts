@@ -10,11 +10,10 @@ export const Container = styled.div`
       font-size: 30px;
     }
     padding-left: 10px;
-    margin: 0 6rem 0 6rem;
+    margin: 0 6rem 10px 6rem;
     height: 25vh;
     background: #e7feff;
     border-radius: 2px;
-    margin-bottom: 10px;
   }
   div {
     display: flex;
@@ -35,15 +34,16 @@ export const Container = styled.div`
 `;
 
 export const ContainerPatients = styled.section`
+  margin-left: 5rem;
+
   div {
+    background: #e7feff;
     display: flex;
     align-items: flex-start;
     justify-content: space-between !important;
     text-align: center;
     height: 4rem;
     width: 40rem !important;
-    width: 300px;
-
     border-bottom: 1px solid #d3d3d3;
     border-top: 1px solid #d3d3d3;
     h4 {
@@ -60,5 +60,12 @@ export const ContainerPatients = styled.section`
       align-items: center;
       width: 5rem;
     }
+  }
+  span {
+    height: 3rem !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 18px;
   }
 `;
