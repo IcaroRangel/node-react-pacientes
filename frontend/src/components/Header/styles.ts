@@ -9,4 +9,8 @@ export const Container = styled.header`
   height: 25vh;
   background: #e7feff;
   border-radius: 2px;
+  p {
+    font-weight: 100;
+    font-size: 30px;
+  }
 `;

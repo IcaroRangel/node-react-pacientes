@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  header {
-    p {
-      font-weight: 100;
-      font-size: 30px;
-    }
-  }
   div {
     display: flex;
     align-items: flex-start;
