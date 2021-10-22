@@ -61,12 +61,12 @@ const CreateUser = () => {
                 <p>{user.address}</p>
               </div>
               <span>
-                <Button onClick={() => deleteUser(user.id)}>
-                  Remover paciente
-                </Button>
                 <Link to={`/updateUser/${user.id}`}>
                   <Button>Editar paciente</Button>
                 </Link>
+                <Button onClick={() => deleteUser(user.id)}>
+                  Remover paciente
+                </Button>
               </span>
             </>
           ))}

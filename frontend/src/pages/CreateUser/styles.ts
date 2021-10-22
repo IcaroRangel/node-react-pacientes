@@ -64,8 +64,7 @@ export const ContainerPatients = styled.section`
   span {
     height: 3rem !important;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 18px;
   }
 `;
