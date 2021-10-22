@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Form from "../../components/Form";
 import api from "../../services/api";
@@ -21,6 +22,15 @@ const CreateUser = () => {
     setUsers(response);
   }, [setUsers]);
 
+  const deleteUser = React.useCallback(
+    async (id: number) => {
+      await api.delete(`/${id}`);
+      const deletedUser = users.filter((user) => user.id !== id);
+      setUsers([...deletedUser]);
+    },
+    [users, setUsers]
+  );
+
   React.useEffect(() => {
     loadUsers();
   }, [loadUsers]);
@@ -38,13 +48,12 @@ const CreateUser = () => {
         <ContainerPatients>
           {users.map((user) => (
             <>
-              <div>
+              <div key={user.id}>
                 <h4>Nome</h4>
                 <h4>Telefone</h4>
                 <h4>E-mail</h4>
                 <h4>Endereço</h4>
               </div>
-
               <div>
                 <p>{user.name}</p>
                 <p>{user.telephone}</p>
@@ -52,8 +61,12 @@ const CreateUser = () => {
                 <p>{user.address}</p>
               </div>
               <span>
-                <Button>Remover paciente</Button>
-                <Button>Editar paciente</Button>
+                <Button onClick={() => deleteUser(user.id)}>
+                  Remover paciente
+                </Button>
+                <Link to={`/updateUser/${user.id}`}>
+                  <Button>Editar paciente</Button>
+                </Link>
               </span>
             </>
           ))}
