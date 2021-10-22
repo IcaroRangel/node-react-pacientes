@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../../components/Button";
 import Form from "../../components/Form";
+import Header from "../../components/Header";
 import api from "../../services/api";
 import { Container, ContainerPatients } from "./styles";
 
@@ -36,13 +37,13 @@ const CreateUser = () => {
   }, [loadUsers]);
   return (
     <Container>
-      <header>
+      <Header>
         <span>
           <p>Cadastro de Pacientes</p>
           <br />
           Hospital Icaro Rangel
         </span>
-      </header>
+      </Header>
       <div>
         <Form />
         <ContainerPatients>

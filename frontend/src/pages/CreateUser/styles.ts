@@ -2,18 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   header {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
     p {
       font-weight: 100;
       font-size: 30px;
     }
-    padding-left: 10px;
-    margin: 0 6rem 10px 6rem;
-    height: 25vh;
-    background: #e7feff;
-    border-radius: 2px;
   }
   div {
     display: flex;
@@ -35,7 +27,6 @@ export const Container = styled.div`
 
 export const ContainerPatients = styled.section`
   margin-left: 5rem;
-
   div {
     background: #e7feff;
     display: flex;
