@@ -49,8 +49,8 @@ const CreateUser = () => {
         <Form />
         <Section>
           {users.map((user) => (
-            <>
-              <div key={user.id}>
+            <section key={user.id}>
+              <div>
                 <h4>Nome</h4>
                 <h4>Telefone</h4>
                 <h4>E-mail</h4>
@@ -70,7 +70,7 @@ const CreateUser = () => {
                   Remover paciente
                 </Button>
               </span>
-            </>
+            </section>
           ))}
         </Section>
       </div>

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   margin-left: 6rem;
-
   div {
     background: #e7feff;
     display: flex;
@@ -35,12 +34,18 @@ export const Container = styled.section`
     align-items: center;
   }
   input {
+    font-size: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6rem;
+    width: 7rem;
     border-radius: 4px;
     height: 20px;
     background: #d3d3d3;
+  }
+  form {
+    button {
+      margin-top: 20px;
+    }
   }
 `;
