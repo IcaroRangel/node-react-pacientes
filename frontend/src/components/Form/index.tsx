@@ -4,17 +4,20 @@ import { FiUser, FiMail } from "react-icons/fi";
 import { FaStreetView, FaVoicemail } from "react-icons/fa";
 import api from "../../services/api";
 import Button from "../Button";
+import { useHistory } from "react-router";
 
 const Form = () => {
   const [name, setName] = React.useState("");
   const [telephone, setTelephone] = React.useState(Number);
   const [email, setEmail] = React.useState("");
   const [address, setAddress] = React.useState("");
+  const history = useHistory();
   const PostUser = React.useCallback(
     async (e: FormEvent) => {
       e.preventDefault();
       const response = { name, telephone, email, address };
       await api.post("", response);
+      history.go(0);
     },
     [address, email, name, telephone]
   );
